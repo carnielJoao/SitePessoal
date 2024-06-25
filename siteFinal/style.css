@@ -1,0 +1,272 @@
+:root {
+    --corPreta: #2a2a2a;
+    --corBranca: #ffffff;
+    --corLaranja: #d4912c;
+    --corVerde: #466028;
+    --fonteTitulos: 'Montserrat';
+    --fonteTexto: ''
+}
+
+/* Style Fundo Estrelado*/
+
+.star-field {
+    width: 100%;
+    height: 100%;
+    background: black;
+    
+    z-index: 0; /* Define z-index baixo para ficar atrás */
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 8px white;
+    animation: twinkle 2s infinite alternate;
+    background: white;
+}
+
+/* Style Estrutura Geral */
+
+body {
+    background: black;
+    height: 100%;
+    
+    position: relative; 
+    font-family: var(--fonteTitulos);
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto auto; 
+    gap: 15px;
+    background-color: transparent;
+    z-index: 1; 
+    position: relative;
+}
+
+/* Style Sessão texto */
+
+.text-section {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2; 
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    padding: 20px;
+}
+
+.sobre {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffffda;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.sobreMais {
+    margin-top: 3%;
+    background-color:rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffffda;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.446) 0.4em 0.4em 0.2em
+}
+
+#verMaisBtn {
+    height: 35px;
+    width: 110px;
+}
+
+.p_sobre {
+    text-align: justify; 
+    line-height: 1.6; 
+}
+
+.additional-content {
+    margin-top: 10px; 
+    text-align: justify; 
+    line-height: 1.6; 
+}
+
+/* Style Sessão Imagem */
+
+.image-section img {
+    width: 80%
+}
+
+.image-section {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
+    /* background-color: rgba(255, 255, 255, 0.1);  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style Sessão Portiolio */
+
+.portfolio-section {
+    grid-column: 1 / 3; 
+    grid-row: 2 / 3; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 20px;
+}
+
+.portfolio-section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center; 
+    align-items: center;
+}
+
+.card {
+    justify-self: center;
+    height: 17rem;
+    width: 12rem;
+    margin: 15px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+    background-color: var(--corBranca);
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.446);
+    
+}
+  
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Style Sessão Contatos*/
+
+.contact-section {
+    grid-column: 1 / 3; /* Ocupa ambas as colunas */
+    grid-row: 3 / 4; /* Ocupa a terceira linha */
+    /* background-color: rgba(255, 255, 255, 0.1);  */
+    padding: 20px;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.contatos-infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contatos-infos div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100px;
+    width: 135px;
+    padding: 1%;
+    margin: 1%;
+    color: #ffffff;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.446) 0.4em 0.4em 0.2em;
+}
+
+.contatos-infos a {
+    margin-bottom: 5px; 
+    color: inherit; /* Herdar a cor do elemento pai */
+    text-decoration: none; /* Remover o sublinhado */
+
+}
+
+.contatos-infos i {
+    font-size: 4rem;
+}
+
+/* Style dos Modal's */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.modal-content {
+    background-color: white;
+    margin: 11% auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 20%;
+    text-align: left;
+    position: relative;
+}
+
+.modal-content div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content span {
+    color: #de4726;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+        grid-template-rows: auto auto auto auto; /* Quatro linhas */
+    }
+    
+    .text-section, .image-section, .portfolio-section, .contact-section {
+        grid-column: 1 / 2; /* Cada div ocupa uma linha completa */
+    }
+
+    .contatos-infos {
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        height: 100%; 
+    }
+
+    .contact-section h2 {
+        margin: 15px;
+    }
+
+    .contatos-infos div {
+        width: 50%; 
+        margin-bottom: 20px; 
+    }
+    
+}

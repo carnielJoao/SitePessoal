@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Carniel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="star-field" id="starField"></div>
+
+    <div class="container">
+
+        <div class="text-section">
+            <div class="sobre">
+                <h1>Prazer, meu nome é João Victor Carniel.</h1>
+                <h1 class="animated">Sou desenvolvedor </h1>
+            </div>    
+            <div class="sobreMais">
+                <p class="p_sobre">
+                    Olá, Seja Bem-Vindo ao meu site pessoal, aqui vou contar um pouco sobre mim e mostrar 
+                    parte dos meus projetos/códigos que venho realizando na área de desenvolvimento Web. 
+                </p>
+                <button id="verMaisBtn">Ver mais</button>
+            </div>
+        </div>
+
+        <div class="image-section">
+            <img src="imgs/3.png" alt="Descrição da imagem">
+        </div>
+
+        <div class="portfolio-section">
+            <h2>Portfólio</h2>
+            <div class="portfolio">
+                
+                <div class="card" onclick="openModalSitePessoal()">
+                    <!-- <div>
+                        <img src="imgs/icons/PESSOA.png" alt="imgCalculadora">
+                    </div> -->
+                    <h1>Site Pessoal</h1>
+                    <div>
+                        <p>
+                            Site que eu fiz para reunir meus projetos.
+                        </p>
+                    </div>
+                </div>  
+
+                <div class="card" onclick="openModalSiteAloSaude()">
+                    <!-- <div>
+                        <img src="imgs/icons/PESSOA.png" alt="imgCalculadora">
+                    </div> -->
+                    <h1>Aló Saude</h1>
+                    <div>
+                        <p>
+                            Um dos primeiros sites que realizei na Prefeitura de Florianopolis
+                            uma pagina sobre o projeto do Aló Saude.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="openModalContatosPmf()">
+                    <!-- <div>
+                        <img src="imgs/icons/PESSOA.png" alt="imgCalculadora">
+                    </div> -->
+                    <h1>Contatos PMF</h1>
+                    <div>
+                        <p>
+                            Um site que fiz para reunir os contatos da Prefeitura de Florianopolis.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card" onclick="openModalInshelf()">
+                    <!-- <div>
+                        <img src="imgs/icons/PESSOA.png" alt="imgCalculadora">
+                    </div> -->
+                    <h1>Inshelf</h1>
+                    <div>
+                        <p>
+                            Projeto em Java que realizei na faculdade, consiste em um sistema de gerenciamento de estoque.
+                        </p>
+                    </div>
+                </div> 
+
+            </div>
+            <!-- Conteúdo do portfólio -->
+        </div>
+
+        <div class="contact-section">
+            <h2>Contatos</h2>
+            <div class="contatos-infos">
+                <div>
+                    <a href="https://www.linkedin.com/in/carnieljoao" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                    joaovictorcarniel
+                </div>
+                <div>
+                    <a href="https://github.com/carnielJoao">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    carnielJoao                   
+                </div>
+                <div>
+                    <a href="">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    carniel_joao
+                </div>
+                <div>
+                    <a href="https://wa.me/+5548991439220?text=Oi!." target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    (48) 99143-9220
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal's do Portifolio -->
+
+    <div id="modalSitePessoal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalSitePessoal()">&times;</span>
+            <div>
+                <a href="" target="_blank">Projeto</a>
+                <a href="" target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalSiteAloSaude" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closSiteAloSaude()">&times;</span>
+            <div>
+                <a href="https://www.pmf.sc.gov.br/sites/alosaude/" target="_blank">Projeto</a>
+                <a href="https://github.com/carnielJoao/SiteAloSaude"  target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalContatosPmf" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalContatosPmf()">&times;</span>
+            <div>
+                <a href="http://contatos.pmf.sc.gov.br/" target="_blank">Projeto</a>
+                <a href="https://github.com/carnielJoao/SiteContatosPMF" target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalInshelf" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModalInshelf()">&times;</span>
+            <div>
+                <a href="https://chatgpt.com/" target="_blank">Projeto</a>
+                <a>Github</a>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
