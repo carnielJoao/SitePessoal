@@ -35,20 +35,6 @@ $(document).ready(function() {
     });
 });
 
-// Função de Criar e espalhar estrelas
-
-    const starField = document.getElementById('starField');
-    const starCount = 400; // Ajuste a quantidade de estrelas aqui
-
-    for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.width = `${Math.random() * 2 + 1}px`;
-        star.style.height = `${Math.random() * 2 + 1}px`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}vw`;
-        starField.appendChild(star);
-    }
 
 // Função para abrir o modal
 
@@ -85,4 +71,3 @@ function closeModalContatosPmf() {
 function closeModalInshelf() {
     document.getElementById("modalInshelf").style.display = "none";
 }
-  
